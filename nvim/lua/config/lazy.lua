@@ -66,11 +66,20 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.keymap.set("n", "]q", "<cmd>cnext<cr>zz", {desc="Move to next item in quickfix list"})
 vim.keymap.set("n", "[q", "<cmd>cprev<cr>zz", {desc="Move to prev item in quickfix list"})
 
+-- Highlight yank
+vim.api.nvim_create_autocmd('TextYankPost', {
+  group = vim.api.nvim_create_augroup('highlight_yank', {}),
+  desc = 'Hightlight selection on yank',
+  pattern = '*',
+  callback = function()
+    vim.highlight.on_yank { higroup = 'IncSearch', timeout = 300 }
+  end,
+})
+
 -- Setup lazy.nvim
 require("lazy").setup({
     {import = "config.plugins"},
     {import = "config.plugins.lsp"},
-    {import = "config.colorschemes"}
-})
+    {import = "config.colorschemes"} })
 
 vim.cmd [[colorscheme gruvbox]]
