@@ -39,7 +39,6 @@ vim.keymap.set("n", "gs", "<cmd>ClangdSwitchSourceHeader<cr>", {desc="Switch bet
 vim.keymap.set("n", "<c-v>", "<cmd>vert sb#<cr>", {desc="Open last buffer vertically split"})
 vim.o.splitright = true
 vim.o.splitbelow = true
-vim.o.clipboard = "unnamedplus"
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "H", "^", {desc="BOL"})
 vim.keymap.set("n", "L", "$", {desc="EOL"})
