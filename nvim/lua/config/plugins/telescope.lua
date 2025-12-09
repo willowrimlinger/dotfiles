@@ -29,7 +29,7 @@ return {
           },
         },
         cache_picker = {
-          num_pickers = 10,
+          num_pickers = 25,
         },
       },
       extensions = {
