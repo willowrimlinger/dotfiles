@@ -11,6 +11,11 @@ return {
 			"<cmd>lua require('spider').motion('b')<CR>",
 			mode = { "n", "o", "x" },
 		},
+		{
+			"<leader>e",
+			"<cmd>lua require('spider').motion('e')<CR>",
+			mode = { "n", "o", "x" },
+		},
 	},
     skipInsignificantPunctuation = false,
     config = function()
