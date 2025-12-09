@@ -36,12 +36,10 @@ vim.o.timeoutlen = 3000
 vim.o.ttimeout = true
 vim.o.ttimeoutlen = 10
 vim.keymap.set("n", "gs", "<cmd>ClangdSwitchSourceHeader<cr>", {desc="Switch between C source and header file"})
-vim.keymap.set("n", "<c-v>", "<cmd>vert sb#<cr>", {desc="Open last buffer vertically split"})
+vim.keymap.set("n", "<c-c>", "<cmd>vert sb#<cr>", {desc="Open last buffer vertically split"})
 vim.o.splitright = true
 vim.o.splitbelow = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
-vim.keymap.set("n", "H", "^", {desc="BOL"})
-vim.keymap.set("n", "L", "$", {desc="EOL"})
 vim.keymap.set("n", "<leader>rf", ":checktime<CR>", {desc="Refresh buffers for external changes"})
 vim.keymap.set("n", "<C-s>", ":w<CR>", {desc="Write"})
 vim.cmd.cabbrev("Conf", "tabnew | lcd ~/.config/nvim/lua/config/plugins | e ~/.config/nvim/lua/config/lazy.lua")
