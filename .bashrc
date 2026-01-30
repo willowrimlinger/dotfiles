@@ -133,3 +133,6 @@ alias lg="lazygit"
 # git autcomplete
 source /usr/share/bash-completion/completions/git
 export PATH="${HOME}/.bin:${PATH}"
+
+# pio
+export PATH="$PATH:$HOME/.platformio/penv/bin"
