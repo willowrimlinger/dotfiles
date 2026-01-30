@@ -8,7 +8,6 @@ return {
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
     "rafamadriz/friendly-snippets", -- useful snippets
     "onsails/lspkind.nvim", -- vs-code like pictograms
-    {"mlaursen/vim-react-snippets", opts = {}}, -- react snippets
   },
   config = function()
     local has_words_before = function()
