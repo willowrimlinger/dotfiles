@@ -136,3 +136,6 @@ export PATH="${HOME}/.bin:${PATH}"
 
 # pio
 export PATH="$PATH:$HOME/.platformio/penv/bin"
+
+# start in home directory (useful for WSL)
+cd ~
