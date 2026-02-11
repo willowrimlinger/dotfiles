@@ -68,16 +68,29 @@ return {
     })
 
     -- used to enable autocompletion (assign to every lsp server config)
-    local capabilities = cmp_nvim_lsp.default_capabilities()
-
     -- autoload the plugins so you don't have to call LspStart <whatever>
     mason_lspconfig.setup({
-        handlers = {
-            function(server_name)
-                require("lspconfig")[server_name].setup {}
-            end
+        ensure_installed = {"basedpyright", "eslint"}
+    })
+
+    vim.lsp.config("basedpyright", {
+        settings = {
+            basedpyright = {
+                analysis = {
+                    diagnosticMode = "workspace",
+                    inlayHints = {
+                        variableTypes = true,
+                        callArgumentNames = true,
+                        functionReturnTypes = true,
+                        genericTypes = true,
+                    },
+                    autoFormatStrings = true,
+                }
+            }
         }
     })
+
+    vim.lsp.inlay_hint.enable(true, {bufnr = bufnr})
 
     -- Change the Diagnostic symbols in the sign column (gutter)
     -- (not in youtube nvim video)
