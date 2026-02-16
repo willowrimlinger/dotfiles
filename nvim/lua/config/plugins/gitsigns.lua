@@ -39,7 +39,7 @@ return {
             map('n', '<leader>hR', gitsigns.reset_buffer, {desc="Reset buffer"})
             map('n', '<leader>hp', gitsigns.preview_hunk, {desc="Preview hunk"})
             map('n', '<leader>hb', function() gitsigns.blame_line{full=true} end, {desc="Git blame"})
-            map('n', '<leader>tb', gitsigns.toggle_current_line_blame, {desc="Toggle git blame"})
+            map('n', '<leader>hB', gitsigns.blame, {desc="Git blame entire buffer"})
             map('n', '<leader>hd', gitsigns.diffthis, {desc="Diff this"})
             map('n', '<leader>hD', function() gitsigns.diffthis('~') end, {desc="Diff this but it's different somehow idk"})
             map('n', '<leader>td', gitsigns.toggle_deleted, {desc="Toggle deleted hunk"})
