@@ -6,7 +6,8 @@ return {
         conform.setup({
             formatters_by_ft = {
                 markdown = { "mdslw" },
-                python = { "black" }
+                python = { "black" },
+                ["*"] = { "prettierd" },
             },
             formatters = {
                 mdslw = { prepend_args = { "--stdin-filepath", "$FILENAME" } },
