@@ -122,14 +122,6 @@ export NVM_DIR="$HOME/.nvm"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
-alias wvim="nvim -c 'lcd ~/sync/notes/school/fourth_yr/spring | NvimTreeOpen'"
-alias gitprune="git fetch --prune; git branch -vv | grep 'gone]' | awk '{print \$1}' | xargs git branch -D"
-alias ls="ls --color=auto -F"
-alias warplog="cat /var/log/cloudflare-warp/cfwarp_service_log.txt | grep support_url | tail -n 5"
-alias python="python3"
-alias py="python3"
-alias lg="lazygit"
-
 # git autcomplete
 source /usr/share/bash-completion/completions/git
 export PATH="${HOME}/.bin:${PATH}"
@@ -137,5 +129,12 @@ export PATH="${HOME}/.bin:${PATH}"
 # pio
 export PATH="$PATH:$HOME/.platformio/penv/bin"
 
-# start in home directory (useful for WSL)
-cd ~
+alias wvim="nvim -c 'lcd ~/sync/notes/school/fourth_yr/spring | NvimTreeOpen'"
+alias gitprune="git fetch --prune; git branch -vv | grep 'gone]' | awk '{print \$1}' | xargs git branch -D"
+alias ls="ls --color=auto -F"
+alias warplog="cat /var/log/cloudflare-warp/cfwarp_service_log.txt | grep support_url | tail -n 5"
+alias python="python3"
+alias py="python3"
+alias lg="lazygit"
+alias clip="xclip -selection clipboard"
+
