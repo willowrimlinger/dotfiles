@@ -61,6 +61,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 vim.keymap.set("n", "]q", "<cmd>cnext<cr>zz", {desc="Move to next item in quickfix list"})
 vim.keymap.set("n", "[q", "<cmd>cprev<cr>zz", {desc="Move to prev item in quickfix list"})
+vim.keymap.set("n", "<leader>ri", "<cmd>set ts=2 sts=2 noet<cr><cmd>retab!<cr><cmd>set ts=4 sts=4 et<cr><cmd>retab!<cr>")
 
 -- Highlight yank
 vim.api.nvim_create_autocmd('TextYankPost', {
